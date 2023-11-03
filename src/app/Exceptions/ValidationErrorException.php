@@ -7,11 +7,11 @@ use Illuminate\Support\Collection;
 
 class ValidationErrorException extends Exception
 {
-    // public Collection $errors;
-    public function __construct(array $errors)
+    public Collection $errors;
+    public function __construct(Collection $errors)
     {
-        // $this->errors = $errors;
+        $this->errors = $errors;
 
-        parent::__construct(collect($errors)->join(', '));
+        parent::__construct($errors->join(', '));
     }
 }

@@ -16,7 +16,7 @@ class NotBlankString extends ValueObject
     public function __construct(string $value, string $field)
     {
         if (empty($value)) {
-            throw new ValidationErrorException([Message::error('VLO_0001', $field)]);
+            throw new ValidationErrorException(collect(Message::error('VLO_0001', $field)));
         }
 
         $this->value = $value;

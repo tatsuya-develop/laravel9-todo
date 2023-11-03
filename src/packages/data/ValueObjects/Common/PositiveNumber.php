@@ -16,7 +16,7 @@ class PositiveNumber extends ValueObject
     public function __construct(int $value, string $field)
     {
         if ($value <= 0) {
-            throw new ValidationErrorException([Message::error('VLO_0003', $field, 1)]);
+            throw new ValidationErrorException(collect(Message::error('VLO_0003', $field, 1)));
         }
 
         $this->value = $value;

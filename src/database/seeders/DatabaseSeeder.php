@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Domain\Models\Todo;
+
 use Illuminate\Database\Seeder;
+use Infrastructure\EloquentModels\Todo;
 
 class DatabaseSeeder extends Seeder
 {
